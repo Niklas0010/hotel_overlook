@@ -1,0 +1,24 @@
+.slide{
+    h3{
+        width: 50%;
+        font-size: 5em;
+        position: absolute;
+        text-align: center;
+        font-family: sans-serif;
+        color: #fff;
+        transform: translateX(100%);
+        margin: 12.5% 0 0 -25%;
+        text-shadow: 1px 1px #000000;
+        height: 150px;
+    }
+    indicators {
+        
+    }
+    img {
+        width: 100%;
+        background-size: cover;
+        height: fit-content;
+        z-index: -1;
+    }
+
+}

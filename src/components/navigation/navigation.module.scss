@@ -1,0 +1,40 @@
+@import '../../styles//theme.scss';
+
+nav{
+    background-color: $bg-black;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    height: 130px;
+
+    ul{
+        list-style-type: none;
+        margin: 50px 10% 0px 0px;
+        padding: 0;
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    li{
+        color: $text-white;
+        display: inline;
+        border-right: 1px solid $text-white;
+        
+    }
+
+    a{
+        color: $text-white;
+        text-decoration: none;
+        margin: 15px;
+    }
+
+
+    li a:hover{
+        color: $bg-red;
+    }
+
+    img {
+        position: relative;
+        left: 10%;
+        top: 20%;
+    }
+}
