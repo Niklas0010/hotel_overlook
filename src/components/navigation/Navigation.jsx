@@ -11,16 +11,16 @@ export function Navigation() {
             <img src={Logo} alt="" />
             <ul>
                 <li>
-                    <Link to="/frontpage">Forside</Link>
+                    <Link to="/FrontPage">Forside</Link>
                 </li>
                 <li>
-                    <Link to="/hotelsandDes">Hoteller og Destinationer</Link>
+                    <Link to="/HotelsandDesPage">Hoteller og Destinationer</Link>
                 </li>
                 <li>
-                    <Link to="/roompage">Værelser</Link>
+                    <Link to="/RoomPage">Værelser</Link>
                 </li>
                 <li>
-                    <Link to="/resevationpage">Reservation</Link>
+                    <Link to="/ResevationsPage">Reservation</Link>
                 </li>
                 <li>
                     <Link to="/loginpage">Login</Link>

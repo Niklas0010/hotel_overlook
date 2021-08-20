@@ -2,6 +2,6 @@ import React from "react";
 
 export function ResevationsPage() {
     return(
-        <h1>Resevationer</h1>
+       <h1>Reservationer</h1>
     )
 }

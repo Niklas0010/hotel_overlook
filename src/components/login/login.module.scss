@@ -1,5 +1,6 @@
 body {
   background-color: #EBEBEB;
+  
 .loginform {
   width: 30%;
   margin: 13% 19%;
@@ -33,10 +34,7 @@ body {
     outline: none;
     border: none;
   }
-  input:focus {
-    outline: none;
-    border: solid 1px black;
-  }
+
   .loginbtn {
     cursor: pointer;
     padding: 10px 30px;
@@ -50,7 +48,7 @@ body {
   .logoutbtn {
     cursor: pointer;
     padding: 10px 30px;
-    margin-right: 20px;
+    // margin-right: 20px;
     background-color: #FF0000;
     color: white;
     border: none;
