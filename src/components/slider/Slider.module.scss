@@ -15,10 +15,9 @@
         
     }
     img {
+        grid-template-columns: 100%;
         width: 100%;
-        background-size: cover;
-        height: fit-content;
-        z-index: -1;
+        height: 86.7vh;
     }
 
 }

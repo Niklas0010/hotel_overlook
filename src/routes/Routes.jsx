@@ -24,6 +24,14 @@ export function Routes () {
                 <HotelsandDesPage/>
             </Route>
 
+            <Route exact path="/hotelsanddespage/:land">
+                <HotelsandDesPage/>
+            </Route>
+
+            <Route exact path="/hotelsanddespage/:land/:city">
+                <HotelsandDesPage/>
+            </Route>
+
             <Route exact path="/roompage">
                 <RoomPage/>
             </Route>

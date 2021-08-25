@@ -6,7 +6,7 @@ import { Routes } from './routes/Routes';
 function App() {
   return (
    <AppContextProvider>
-     <Router basename="/frontpagenpm install react-responsive --save">
+     <Router>
         <Navigation/>
         <Routes/>
      </Router>
