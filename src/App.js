@@ -1,16 +1,18 @@
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Navigation } from './components/navigation/Navigation';
-import { AppContextProvider } from './context/ContextProvider';
+import { AuthProvider } from './components/login/AuthProvider';
 import { Routes } from './routes/Routes';
 
 function App() {
   return (
-   <AppContextProvider>
+   <>
+   <AuthProvider>
      <Router>
         <Navigation/>
         <Routes/>
      </Router>
-   </AppContextProvider>
+     </AuthProvider>
+     </>
   );
 }
 

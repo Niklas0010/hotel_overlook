@@ -1,19 +1,22 @@
-export async function doFetch(url, type, data) {
- let method = type || 'GET'
- let body = data || null
+/**
+ * 
+ * @param {*} url 
+ * @param {*} options 
+ * @returns Array
+ */
 
- const options = {
-   method : method,
-   body : body
- }
-
- try {
-   const response = await fetch(url, options)
-   const data = await response.json()
-   return data
- }
-
- catch(error) {
-   console.log(error)
- }
+export async function doFetch(url, options = null) {
+  if(!options) {
+    options = {
+      method: 'GET'
+    }
+  }
+  try {
+    const response = await fetch(url, options);
+    const result = await response.json();
+    return result;
+  }
+  catch(error) {
+    console.error(error)
+  }
 }

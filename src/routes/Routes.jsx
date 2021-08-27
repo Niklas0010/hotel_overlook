@@ -7,6 +7,7 @@ import { HotelsandDesPage } from "../pages/HotelsandDesPage/HotelsandDesPage";
 import { LoginPage} from "../pages/LoginPage/LoginPage";
 import { ResevationsPage } from "../pages/ResevationsPage/ResevationsPage";
 import { RoomPage } from "../pages/RoomPage/RoomPage";
+import { Comments } from '../pages/comments/Comments';
 
 
 export function Routes () {
@@ -18,6 +19,10 @@ export function Routes () {
             </Route>
             <Route exact path="/frontpage">
                 <Frontpage/>
+            </Route>
+
+            <Route path='/comments/:id'>
+                <Comments />
             </Route>
 
             <Route exact path="/hotelsanddespage">

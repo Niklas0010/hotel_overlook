@@ -19,11 +19,14 @@ export function Login() {
     formData.append("username", data.username)
     formData.append("password", data.password)
 
+    const options = {
+      method: 'POST',
+      body: formData
+    }
+
     let url = "https://api.mediehuset.net/token"
 
-
-
-    let res = await doFetch(url, 'POST', formData)
+    let res = await doFetch(url, options)
     handleSessionData(res)
 
   }

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, Route, Switch, useParams } from "react-router-dom";
 import { doFetch } from "../../helpers/Fetch";
+import Style from './Hotelsanddes.module.scss'
 
 export const HotelsandDesPage = () => {
   const [apiData, setApiData] = useState("");
@@ -33,25 +34,27 @@ export const HotelsandDesPage = () => {
     getHotels();
   }, [land, city]);
 
-  console.log(apiData_cities?.items?.findIndex(v => v.id === String(city)))
+  console.log(apiData_cities?.items?.findIndex(obj => obj.id === String(city)))
 
   return (
     
     <Switch>
       <Route exact path="/HotelsandDesPage">
-      <p>Lande</p>
-        <ul>
+      <p className={Style.countryP}>Lande</p>
+        <ul className={Style.countryUnordered}>
           {apiData &&
             apiData.items.map((item, key) => {
               return (
                 <>
-                  <Link to={`/HotelsandDesPage/${item.id}`}>
-                    <li key={key}>
-                      <h4>{item.name}</h4>
+                  <Link className={Style.ulLink} to={`/HotelsandDesPage/${item.id}`}>
+                    <li className={Style.countryList} key={key}>
+                      <figure className={Style.imgContainer}>
+                        <img className={Style.countryImgs} src={item.image} alt="" />
+                        <figcaption>{item.name}</figcaption>
+                      </figure>
                     </li>
-                    <img src={item.image} width="200px" alt="" />
                   </Link>
-                  <p>{item.description}</p>
+                  {/* <p>{item.description}</p> */}
                 </>
               );
             })}
@@ -79,7 +82,7 @@ export const HotelsandDesPage = () => {
       </Route>
 
       <Route exact path="/HotelsandDesPage/:id/:city" >
-      <p>Hoteller i {apiData_cities && apiData_cities?.items[apiData_cities?.items?.findIndex(v => v.id === String(city))]?.name}</p>
+      <p>Hoteller i {apiData_cities && apiData_cities?.items[apiData_cities?.items?.findIndex(obj => obj.id === String(city))]?.name}</p>
         <ul>
           {apiData_hotels &&
             apiData_hotels.items.map((item, key) => {
